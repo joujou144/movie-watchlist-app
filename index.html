@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Googlefonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Movies Watchlist API</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <nav>
+        <div class="logo">Movie<span class="accent">Time.</span></div>
+      </nav>
+      <header>       
+        <h1>Find your film</h1>
+        <form id="form">
+          <input id="search-input" class="searchbar" type="text" name="search-input" placeholder="Search movie title">
+            <span><i class="ri-search-line search-icon"></i></span>
+        </form>
+        
+        <a href="watchlist.html" class="watchlist-btn">My Watchlist</a>       
+      </header>
+
+   
+      <section class="result-container" id="result-container">        
+        <div class="no-content">
+          
+          <p class="film-icon"><i class="ri-film-line"></i></p>
+          <p>Start exploring</p>
+          
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>

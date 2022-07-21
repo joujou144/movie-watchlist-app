@@ -1,0 +1,258 @@
+*,::after,::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+}
+
+.container {
+  width: 1000px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  color: white;
+  height: 3.3em;
+  padding: 1em 3.3em;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.accent {
+  color: darkorange;
+}
+
+header {
+  position: relative;
+  background-image: url(../images/andre-tan-THJJRUhNlEc-unsplash.jpg);
+  background-size: cover;
+  background-position: center top 25%;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+  height: 40vh;
+  padding: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  align-items: center;
+}
+
+header h1 {
+  color: rgb(231, 227, 227);
+  position: relative;
+  font-size: 2.5rem;
+}
+
+header h1::before {
+  position: absolute;
+  content: '';
+  right: 0;
+  border: 3px solid darkorange;
+  width: 28%;
+  bottom: -10%;
+}
+
+.watchlist-btn {
+  text-decoration: none;
+  background-color: white;
+  color: #0a0b0c;
+  padding: 0.8em 1.5em 1em;
+  border-radius: 0.3em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.searchbar {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 4em;
+  width: 70%;
+  transform: translate(-50%, 50%);
+  border-radius: 0.4em;
+  background-color: white;
+  border: 1px solid lightgrey;
+  padding-left: 5em;
+}
+
+.searchbar:focus {
+  outline: lightblue;
+  border: 2px solid darkorange;
+}
+
+.searchbar::placeholder {
+  color: lightgrey;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.searchbar:focus::placeholder {
+  color: transparent;
+}
+
+.search-icon {
+  position: absolute;
+  bottom: 0;
+  left: 19%;
+  font-size: 1.4rem;
+  transform: translate(-50%, 45%);
+  color:darkorange;
+}
+
+.result-container {
+  background-color: #0a0b0c;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 4em 4em;
+  color: lightgrey;
+}
+
+.no-content {
+  margin-top: 4em;
+}
+
+.no-content > * {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #575858;
+}
+
+.film-icon {
+  font-size: 2.5rem;
+}
+
+.add-icon {
+  font-size: 1.8rem;
+}
+
+.add-movie-msg {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.movie-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4em 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+.poster {
+  position: relative;
+}
+
+.poster img {
+  border: 3px solid white;
+  object-fit: cover;
+  border-radius: 0.3em;
+  max-width: 250px;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5em;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: darkorange;
+}
+
+.rating {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background-color: darkorange;
+  padding: 0.2em 0.4em;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.1em;
+}
+
+.misc-info {
+  display: flex;
+  gap: 1em;
+}
+
+.misc-info li {
+  list-style: none;
+}
+
+.add-btn {
+  padding: 0.5em 0.8em 0.5em 0.5em;
+  cursor: pointer;
+  background-color: rgb(36, 33, 33);
+  outline: none;
+  border: none;
+  border-radius: 0.2em;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  color: darkgrey;
+  transition: 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+.add-btn i {
+  font-size: 1.1rem;
+}
+
+.add-btn:hover {
+  color: darkorange;
+}
+
+.language {
+  font-style: italic;
+  color: darkorange;
+}
+
+@media (min-width: 770px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .movie-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4em;
+  }
+
+  .movie-details {
+    width: 60%;
+    align-items: flex-start;
+    text-align: left;
+  }
+} 
